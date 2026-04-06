@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a8c10bff6d143e3a9c41d7746e1dda, type: 3}
+  m_Name: 02_CannonTower
+  m_EditorClassIdentifier: 
+  Id: tower_cannon
+  DisplayName: Cannon Tower
+  Category: 0
+  VisualStyle: 1
+  BuildCost:
+  - Type: 0
+    Amount: 85
+  - Type: 1
+    Amount: 10
+  - Type: 2
+    Amount: 14
+  MaxLevel: 3
+  UpgradeCost:
+  - Type: 0
+    Amount: 52
+  - Type: 1
+    Amount: 10
+  - Type: 2
+    Amount: 8
+  UpgradeCostMultiplierPerLevel: 1.35
+  SellRefundPercent: 0.65
+  DamageKind: 1
+  Damage: 30
+  AttackInterval: 1.3
+  Range: 8.2
+  ProjectileSpeed: 14
+  SplashRadius: 0
+  UsesArcProjectile: 0
+  AttackCostPerShot:
+  - Type: 3
+    Amount: 1
+  - Type: 1
+    Amount: 1
+  DamageMultiplierPerLevel: 1.28
+  AttackIntervalMultiplierPerLevel: 0.94
+  RangeBonusPerLevel: 0.45
+  ConsumptionPerCycle: []
+  ProductionPerCycle: []
+  ProductionInterval: 2.5
+  ProductionMultiplierPerLevel: 1.3

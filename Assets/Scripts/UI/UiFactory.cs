@@ -67,7 +67,7 @@ namespace FortDefense.UI
             labelObject.transform.SetParent(parent, false);
 
             Text label = labelObject.GetComponent<Text>();
-            label.font = Resources.GetBuiltinResource<Font>("Arial.ttf");
+            label.font = Resources.GetBuiltinResource<Font>("LegacyRuntime.ttf");
             label.text = text;
             label.fontSize = fontSize;
             label.alignment = alignment;
@@ -118,4 +118,3 @@ namespace FortDefense.UI
         }
     }
 }
-

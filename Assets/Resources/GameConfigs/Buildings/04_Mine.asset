@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a8c10bff6d143e3a9c41d7746e1dda, type: 3}
+  m_Name: 04_Mine
+  m_EditorClassIdentifier: 
+  Id: mine
+  DisplayName: Mine
+  Category: 1
+  VisualStyle: 3
+  BuildCost:
+  - Type: 0
+    Amount: 45
+  - Type: 1
+    Amount: 5
+  MaxLevel: 3
+  UpgradeCost:
+  - Type: 0
+    Amount: 30
+  - Type: 1
+    Amount: 8
+  UpgradeCostMultiplierPerLevel: 1.35
+  SellRefundPercent: 0.65
+  DamageKind: 0
+  Damage: 5
+  AttackInterval: 1
+  Range: 4
+  ProjectileSpeed: 10
+  SplashRadius: 0
+  UsesArcProjectile: 0
+  AttackCostPerShot: []
+  DamageMultiplierPerLevel: 1.25
+  AttackIntervalMultiplierPerLevel: 0.92
+  RangeBonusPerLevel: 0.45
+  ConsumptionPerCycle: []
+  ProductionPerCycle:
+  - Type: 0
+    Amount: 12
+  ProductionInterval: 2.8
+  ProductionMultiplierPerLevel: 1.35
