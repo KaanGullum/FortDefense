@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 02_Brute
   m_EditorClassIdentifier: 
   Id: brute
-  DisplayName: Brute
-  VisualStyle: 1
+  DisplayName: Siege Crawler
+  VisualStyle: 4
   MaxHealth: 120
   MoveSpeed: 2.25
   CoreDamage: 3
@@ -22,4 +22,6 @@ MonoBehaviour:
   LightDamageMultiplier: 0.82
   HeavyDamageMultiplier: 1.25
   ExplosiveDamageMultiplier: 1
-  PrimaryColor: {r: 0.74, g: 0.41, b: 0.28, a: 1}
+  PrimaryColor: {r: 0.74, g: 0.37, b: 0.22, a: 1}
+  SecondaryColor: {r: 0.27, g: 0.24, b: 0.22, a: 1}
+  AccentColor: {r: 0.98, g: 0.66, b: 0.22, a: 1}

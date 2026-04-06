@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 03_Armored
   m_EditorClassIdentifier: 
   Id: armored
-  DisplayName: Armored
-  VisualStyle: 2
+  DisplayName: Shield Warden
+  VisualStyle: 5
   MaxHealth: 92
   MoveSpeed: 3.2
   CoreDamage: 2
@@ -22,4 +22,6 @@ MonoBehaviour:
   LightDamageMultiplier: 0.55
   HeavyDamageMultiplier: 1.1
   ExplosiveDamageMultiplier: 0.85
-  PrimaryColor: {r: 0.47, g: 0.58, b: 0.73, a: 1}
+  PrimaryColor: {r: 0.49, g: 0.67, b: 0.89, a: 1}
+  SecondaryColor: {r: 0.26, g: 0.31, b: 0.38, a: 1}
+  AccentColor: {r: 0.88, g: 0.95, b: 1, a: 1}

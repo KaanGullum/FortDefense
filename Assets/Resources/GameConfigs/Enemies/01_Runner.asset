@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: 01_Runner
   m_EditorClassIdentifier: 
   Id: runner
-  DisplayName: Runner
-  VisualStyle: 0
+  DisplayName: Needle Scout
+  VisualStyle: 3
   MaxHealth: 28
   MoveSpeed: 5.2
   CoreDamage: 1
@@ -22,4 +22,6 @@ MonoBehaviour:
   LightDamageMultiplier: 1
   HeavyDamageMultiplier: 1
   ExplosiveDamageMultiplier: 1.1
-  PrimaryColor: {r: 0.46, g: 0.86, b: 0.54, a: 1}
+  PrimaryColor: {r: 0.24, g: 0.82, b: 0.74, a: 1}
+  SecondaryColor: {r: 0.15, g: 0.2, b: 0.28, a: 1}
+  AccentColor: {r: 0.96, g: 0.84, b: 0.28, a: 1}

@@ -9,7 +9,7 @@ Stylized 3D Unity tower defense / base defense prototype built around a fixed ro
 - `4` enemy waves
 - `3` defense buildings: Gun Tower, Cannon Tower, Mortar Tower
 - `4` economy buildings: Mine, Generator, Smelter, Ammo Factory
-- `3` enemy types: Runner, Brute, Armored
+- `3` enemy types: Needle Scout, Siege Crawler, Shield Warden
 - fixed road/path with visible square build slots
 - special ore, power, and industry build slots
 - base/core health, win, and lose states

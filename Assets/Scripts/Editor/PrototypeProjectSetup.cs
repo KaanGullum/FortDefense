@@ -248,8 +248,8 @@ namespace FortDefense.Editor
             EnemyDefinition runner = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/01_Runner.asset", forceRebuild, asset =>
             {
                 asset.Id = "runner";
-                asset.DisplayName = "Runner";
-                asset.VisualStyle = EnemyVisualStyle.ScoutBot;
+                asset.DisplayName = "Needle Scout";
+                asset.VisualStyle = EnemyVisualStyle.NeedleScout;
                 asset.MaxHealth = 28f;
                 asset.MoveSpeed = 5.2f;
                 asset.CoreDamage = 1;
@@ -265,7 +265,7 @@ namespace FortDefense.Editor
             EnemyDefinition brute = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/02_Brute.asset", forceRebuild, asset =>
             {
                 asset.Id = "brute";
-                asset.DisplayName = "Brute";
+                asset.DisplayName = "Siege Crawler";
                 asset.VisualStyle = EnemyVisualStyle.SiegeCrawler;
                 asset.MaxHealth = 120f;
                 asset.MoveSpeed = 2.25f;
@@ -282,8 +282,8 @@ namespace FortDefense.Editor
             EnemyDefinition armored = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/03_Armored.asset", forceRebuild, asset =>
             {
                 asset.Id = "armored";
-                asset.DisplayName = "Armored";
-                asset.VisualStyle = EnemyVisualStyle.ShieldDrone;
+                asset.DisplayName = "Shield Warden";
+                asset.VisualStyle = EnemyVisualStyle.ShieldWarden;
                 asset.MaxHealth = 92f;
                 asset.MoveSpeed = 3.2f;
                 asset.CoreDamage = 2;

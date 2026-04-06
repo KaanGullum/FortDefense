@@ -51,7 +51,7 @@ namespace FortDefense.Enemies
                     PrimitiveFactory.CreatePrimitive("Shield", PrimitiveType.Cube, root, new Vector3(0f, 0.95f, 0.55f), new Vector3(1.1f, 1.15f, 0.18f), secondary);
                     PrimitiveFactory.CreatePrimitive("Helmet", PrimitiveType.Cylinder, root, new Vector3(0f, 1.72f, 0f), new Vector3(0.42f, 0.22f, 0.42f), dark);
                     break;
-                case EnemyVisualStyle.ScoutBot:
+                case EnemyVisualStyle.NeedleScout:
                     PrimitiveFactory.CreatePrimitive("Body", PrimitiveType.Cylinder, root, new Vector3(0f, 0.74f, 0f), new Vector3(0.6f, 0.52f, 0.6f), primary);
                     PrimitiveFactory.CreatePrimitive("Head", PrimitiveType.Cube, root, new Vector3(0f, 1.32f, 0.08f), new Vector3(0.66f, 0.4f, 0.48f), secondary);
                     PrimitiveFactory.CreatePrimitive("EyeBar", PrimitiveType.Cube, root, new Vector3(0f, 1.35f, 0.34f), new Vector3(0.42f, 0.11f, 0.08f), accent);
@@ -66,7 +66,7 @@ namespace FortDefense.Enemies
                     PrimitiveFactory.CreatePrimitive("TrackLeft", PrimitiveType.Cube, root, new Vector3(-0.86f, 0.36f, 0f), new Vector3(0.24f, 0.28f, 1.68f), dark);
                     PrimitiveFactory.CreatePrimitive("TrackRight", PrimitiveType.Cube, root, new Vector3(0.86f, 0.36f, 0f), new Vector3(0.24f, 0.28f, 1.68f), dark);
                     break;
-                case EnemyVisualStyle.ShieldDrone:
+                case EnemyVisualStyle.ShieldWarden:
                     PrimitiveFactory.CreatePrimitive("Core", PrimitiveType.Sphere, root, new Vector3(0f, 1.08f, 0f), new Vector3(0.82f, 0.82f, 0.82f), primary);
                     PrimitiveFactory.CreatePrimitive("LowerDisc", PrimitiveType.Cylinder, root, new Vector3(0f, 0.84f, 0f), new Vector3(0.96f, 0.08f, 0.96f), secondary);
                     PrimitiveFactory.CreatePrimitive("UpperDisc", PrimitiveType.Cylinder, root, new Vector3(0f, 1.26f, 0f), new Vector3(0.72f, 0.06f, 0.72f), dark);

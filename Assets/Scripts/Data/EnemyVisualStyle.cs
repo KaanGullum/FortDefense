@@ -5,8 +5,8 @@ namespace FortDefense.Data
         Runner,
         Brute,
         Armored,
-        ScoutBot,
+        NeedleScout,
         SiegeCrawler,
-        ShieldDrone
+        ShieldWarden
     }
 }
