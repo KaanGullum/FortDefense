@@ -11,7 +11,7 @@ namespace FortDefense.Buildings
         private ResourceBank _resourceBank;
         private float _timer;
 
-        public void Initialize(BuildingDefinition definition, BuildTile tile, ResourceBank resourceBank)
+        public override void Initialize(BuildingDefinition definition, BuildTile tile, ResourceBank resourceBank)
         {
             base.Initialize(definition, tile, resourceBank);
             _resourceBank = resourceBank;

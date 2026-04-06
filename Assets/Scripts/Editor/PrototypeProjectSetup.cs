@@ -58,7 +58,7 @@ namespace FortDefense.Editor
             EnsureFolder(EnemiesRoot);
             EnsureFolder(WavesRoot);
 
-            GameBalanceConfig balanceConfig = CreateOrUpdateAsset(
+            GameBalanceConfig balanceConfig = CreateOrUpdateAsset<GameBalanceConfig>(
                 ConfigRoot + "/GameBalanceConfig.asset",
                 forceRebuild,
                 asset =>
@@ -74,7 +74,7 @@ namespace FortDefense.Editor
                     };
                 });
 
-            BuildingDefinition gunTower = CreateOrUpdateAsset(BuildingsRoot + "/01_GunTower.asset", forceRebuild, asset =>
+            BuildingDefinition gunTower = CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/01_GunTower.asset", forceRebuild, asset =>
             {
                 asset.Id = "tower_gun";
                 asset.DisplayName = "Gun Tower";
@@ -101,7 +101,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.3f;
             });
 
-            BuildingDefinition cannonTower = CreateOrUpdateAsset(BuildingsRoot + "/02_CannonTower.asset", forceRebuild, asset =>
+            BuildingDefinition cannonTower = CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/02_CannonTower.asset", forceRebuild, asset =>
             {
                 asset.Id = "tower_cannon";
                 asset.DisplayName = "Cannon Tower";
@@ -136,7 +136,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.3f;
             });
 
-            BuildingDefinition mortarTower = CreateOrUpdateAsset(BuildingsRoot + "/03_MortarTower.asset", forceRebuild, asset =>
+            BuildingDefinition mortarTower = CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/03_MortarTower.asset", forceRebuild, asset =>
             {
                 asset.Id = "tower_mortar";
                 asset.DisplayName = "Mortar Tower";
@@ -172,7 +172,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.3f;
             });
 
-            CreateOrUpdateAsset(BuildingsRoot + "/04_Mine.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/04_Mine.asset", forceRebuild, asset =>
             {
                 asset.Id = "mine";
                 asset.DisplayName = "Mine";
@@ -189,7 +189,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.35f;
             });
 
-            CreateOrUpdateAsset(BuildingsRoot + "/05_Generator.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/05_Generator.asset", forceRebuild, asset =>
             {
                 asset.Id = "generator";
                 asset.DisplayName = "Generator";
@@ -206,7 +206,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.35f;
             });
 
-            CreateOrUpdateAsset(BuildingsRoot + "/06_Smelter.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/06_Smelter.asset", forceRebuild, asset =>
             {
                 asset.Id = "smelter";
                 asset.DisplayName = "Smelter";
@@ -223,7 +223,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.32f;
             });
 
-            CreateOrUpdateAsset(BuildingsRoot + "/07_AmmoFactory.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<BuildingDefinition>(BuildingsRoot + "/07_AmmoFactory.asset", forceRebuild, asset =>
             {
                 asset.Id = "ammo_factory";
                 asset.DisplayName = "Ammo Factory";
@@ -245,7 +245,7 @@ namespace FortDefense.Editor
                 asset.ProductionMultiplierPerLevel = 1.32f;
             });
 
-            EnemyDefinition runner = CreateOrUpdateAsset(EnemiesRoot + "/01_Runner.asset", forceRebuild, asset =>
+            EnemyDefinition runner = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/01_Runner.asset", forceRebuild, asset =>
             {
                 asset.Id = "runner";
                 asset.DisplayName = "Runner";
@@ -260,7 +260,7 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.46f, 0.86f, 0.54f);
             });
 
-            EnemyDefinition brute = CreateOrUpdateAsset(EnemiesRoot + "/02_Brute.asset", forceRebuild, asset =>
+            EnemyDefinition brute = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/02_Brute.asset", forceRebuild, asset =>
             {
                 asset.Id = "brute";
                 asset.DisplayName = "Brute";
@@ -275,7 +275,7 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.74f, 0.41f, 0.28f);
             });
 
-            EnemyDefinition armored = CreateOrUpdateAsset(EnemiesRoot + "/03_Armored.asset", forceRebuild, asset =>
+            EnemyDefinition armored = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/03_Armored.asset", forceRebuild, asset =>
             {
                 asset.Id = "armored";
                 asset.DisplayName = "Armored";
@@ -290,7 +290,7 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.47f, 0.58f, 0.73f);
             });
 
-            CreateOrUpdateAsset(WavesRoot + "/01_Wave01.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/01_Wave01.asset", forceRebuild, asset =>
             {
                 asset.WaveNumber = 1;
                 asset.CountdownBeforeWave = 10f;
@@ -300,7 +300,7 @@ namespace FortDefense.Editor
                 };
             });
 
-            CreateOrUpdateAsset(WavesRoot + "/02_Wave02.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/02_Wave02.asset", forceRebuild, asset =>
             {
                 asset.WaveNumber = 2;
                 asset.CountdownBeforeWave = 12f;
@@ -311,7 +311,7 @@ namespace FortDefense.Editor
                 };
             });
 
-            CreateOrUpdateAsset(WavesRoot + "/03_Wave03.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/03_Wave03.asset", forceRebuild, asset =>
             {
                 asset.WaveNumber = 3;
                 asset.CountdownBeforeWave = 15f;
@@ -323,7 +323,7 @@ namespace FortDefense.Editor
                 };
             });
 
-            CreateOrUpdateAsset(WavesRoot + "/04_Wave04.asset", forceRebuild, asset =>
+            CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/04_Wave04.asset", forceRebuild, asset =>
             {
                 asset.WaveNumber = 4;
                 asset.CountdownBeforeWave = 16f;
