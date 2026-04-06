@@ -4,7 +4,9 @@ namespace FortDefense.Data
     {
         Runner,
         Brute,
-        Armored
+        Armored,
+        ScoutBot,
+        SiegeCrawler,
+        ShieldDrone
     }
 }
-

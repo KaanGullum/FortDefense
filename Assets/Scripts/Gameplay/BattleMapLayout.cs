@@ -100,7 +100,8 @@ namespace FortDefense.Gameplay
 
         public static Vector3 ToWorld(Vector2Int cell, float y = 0f)
         {
-            return new Vector3(cell.x * CellSize, y, cell.y * CellSize);
+            // Rotate the board so the long road axis reads vertically on portrait phones.
+            return new Vector3(cell.y * CellSize, y, cell.x * CellSize);
         }
 
         private static void AddRoadSegment(List<Vector2Int> roadCells, Vector2Int from, Vector2Int to)

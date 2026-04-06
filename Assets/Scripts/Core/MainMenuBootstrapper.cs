@@ -62,11 +62,11 @@ namespace FortDefense.Core
             GameObject cameraObject = new GameObject("MainCamera");
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
-            camera.orthographicSize = 19f;
+            camera.orthographicSize = 35.5f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.62f, 0.78f, 0.94f);
-            camera.transform.position = mapCenter + new Vector3(-12f, 32f, -18f);
-            camera.transform.rotation = Quaternion.Euler(52f, 34f, 0f);
+            camera.transform.position = mapCenter + new Vector3(0f, 44f, -20f);
+            camera.transform.rotation = Quaternion.Euler(63f, 0f, 0f);
         }
 
         private static void CreateLighting()
@@ -104,7 +104,7 @@ namespace FortDefense.Core
             Text subtitle = UiFactory.CreateText(
                 "Subtitle",
                 panel.transform,
-                "Stylized 3D road-and-slots defense prototype for iPhone landscape.\nPower your guns, refine alloy, manufacture ammo, and hold four escalating waves.",
+                "Stylized 3D road-and-slots defense prototype for iPhone portrait.\nPower your guns, refine alloy, manufacture ammo, and hold four escalating waves.",
                 28,
                 TextAnchor.UpperLeft,
                 new Color(0.9f, 0.92f, 0.95f));

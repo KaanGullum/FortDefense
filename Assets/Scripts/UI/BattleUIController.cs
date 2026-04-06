@@ -198,7 +198,7 @@ namespace FortDefense.UI
                 canvas.transform,
                 new Vector2(0f, 1f),
                 new Vector2(1f, 1f),
-                new Vector2(16f, -112f),
+                new Vector2(16f, -168f),
                 new Vector2(-16f, -16f),
                 new Color(0.05f, 0.08f, 0.13f, 0.82f));
 
@@ -209,28 +209,28 @@ namespace FortDefense.UI
             waveRect.anchorMin = new Vector2(0.5f, 0f);
             waveRect.anchorMax = new Vector2(0.5f, 1f);
             waveRect.sizeDelta = new Vector2(320f, 36f);
-            waveRect.anchoredPosition = new Vector2(0f, -22f);
+            waveRect.anchoredPosition = new Vector2(0f, -28f);
 
             _countdownText = UiFactory.CreateText("CountdownText", topBar.transform, "Prepare defenses", 22, TextAnchor.UpperCenter, new Color(0.88f, 0.88f, 0.92f));
             RectTransform countdownRect = _countdownText.GetComponent<RectTransform>();
             countdownRect.anchorMin = new Vector2(0.5f, 0f);
             countdownRect.anchorMax = new Vector2(0.5f, 1f);
             countdownRect.sizeDelta = new Vector2(420f, 28f);
-            countdownRect.anchoredPosition = new Vector2(0f, -58f);
+            countdownRect.anchoredPosition = new Vector2(0f, -68f);
 
             _coreHealthText = UiFactory.CreateText("CoreText", topBar.transform, "Core 25/25", 28, TextAnchor.UpperRight, Color.white);
             RectTransform coreRect = _coreHealthText.GetComponent<RectTransform>();
             coreRect.anchorMin = new Vector2(1f, 0f);
             coreRect.anchorMax = new Vector2(1f, 1f);
             coreRect.sizeDelta = new Vector2(220f, 36f);
-            coreRect.anchoredPosition = new Vector2(-132f, -22f);
+            coreRect.anchoredPosition = new Vector2(-126f, -28f);
 
             _statusText = UiFactory.CreateText("StatusText", canvas.transform, string.Empty, 24, TextAnchor.MiddleCenter, new Color(0.97f, 0.87f, 0.34f));
             RectTransform statusRect = _statusText.GetComponent<RectTransform>();
             statusRect.anchorMin = new Vector2(0.5f, 1f);
             statusRect.anchorMax = new Vector2(0.5f, 1f);
             statusRect.sizeDelta = new Vector2(920f, 36f);
-            statusRect.anchoredPosition = new Vector2(0f, -132f);
+            statusRect.anchoredPosition = new Vector2(0f, -188f);
 
             BuildConstructionPanel(canvas.transform, buildingDefinitions);
             BuildSelectedBuildingPanel(canvas.transform);
@@ -405,13 +405,18 @@ namespace FortDefense.UI
 
             for (int index = 0; index < types.Length; index++)
             {
+                int column = index % 2;
+                int row = index / 2;
+                float left = 18f + (column * 118f);
+                float top = -14f - (row * 56f);
+
                 GameObject pill = UiFactory.CreatePanel(
                     types[index] + "Pill",
                     parent,
-                    new Vector2(0f, 0f),
                     new Vector2(0f, 1f),
-                    new Vector2(18f + (index * 112f), 14f),
-                    new Vector2(118f + (index * 112f), -14f),
+                    new Vector2(0f, 1f),
+                    new Vector2(left, top - 42f),
+                    new Vector2(left + 108f, top),
                     new Color(0.13f, 0.2f, 0.3f, 0.95f));
 
                 Text label = UiFactory.CreateText(

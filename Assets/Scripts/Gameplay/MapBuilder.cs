@@ -21,8 +21,8 @@ namespace FortDefense.Gameplay
                 "Terrain",
                 PrimitiveType.Cube,
                 root,
-                new Vector3(2f, -0.8f, -1f),
-                new Vector3(50f, 1.2f, 34f),
+                new Vector3(-1f, -0.8f, 2f),
+                new Vector3(34f, 1.2f, 50f),
                 TerrainColor);
 
             terrain.GetComponent<Renderer>().receiveShadows = true;
@@ -114,7 +114,7 @@ namespace FortDefense.Gameplay
             result.CorePosition = coreRoot.transform.position;
             result.PathPoints.AddRange(layout.GetWorldPathPoints());
             result.SpawnPosition = result.PathPoints[0];
-            result.MapCenter = new Vector3(2f, 0f, -1f);
+            result.MapCenter = new Vector3(-1f, 0f, 2f);
 
             return result;
         }
@@ -124,14 +124,14 @@ namespace FortDefense.Gameplay
             Transform wallRoot = new GameObject("Walls").transform;
             wallRoot.SetParent(root, false);
 
-            CreateWallSegment(wallRoot, new Vector3(2f, 0.8f, 15f), new Vector3(46f, 1.6f, 1.2f));
-            CreateWallSegment(wallRoot, new Vector3(2f, 0.8f, -17f), new Vector3(46f, 1.6f, 1.2f));
-            CreateWallSegment(wallRoot, new Vector3(-21f, 0.8f, -1f), new Vector3(1.2f, 1.6f, 31f));
-            CreateWallSegment(wallRoot, new Vector3(25f, 0.8f, -1f), new Vector3(1.2f, 1.6f, 31f));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(2f, 0.8f, 15f)), RotateScale(new Vector3(46f, 1.6f, 1.2f)));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(2f, 0.8f, -17f)), RotateScale(new Vector3(46f, 1.6f, 1.2f)));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(-21f, 0.8f, -1f)), RotateScale(new Vector3(1.2f, 1.6f, 31f)));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(25f, 0.8f, -1f)), RotateScale(new Vector3(1.2f, 1.6f, 31f)));
 
-            CreateWallSegment(wallRoot, new Vector3(16f, 0.8f, 4f), new Vector3(8f, 1.6f, 1.2f));
-            CreateWallSegment(wallRoot, new Vector3(16f, 0.8f, -4f), new Vector3(8f, 1.6f, 1.2f));
-            CreateWallSegment(wallRoot, new Vector3(20f, 0.8f, 0f), new Vector3(1.2f, 1.6f, 9f));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(16f, 0.8f, 4f)), RotateScale(new Vector3(8f, 1.6f, 1.2f)));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(16f, 0.8f, -4f)), RotateScale(new Vector3(8f, 1.6f, 1.2f)));
+            CreateWallSegment(wallRoot, RotatePosition(new Vector3(20f, 0.8f, 0f)), RotateScale(new Vector3(1.2f, 1.6f, 9f)));
         }
 
         private static void CreateWallSegment(Transform parent, Vector3 position, Vector3 scale)
@@ -143,6 +143,16 @@ namespace FortDefense.Gameplay
                 position,
                 scale,
                 WallColor);
+        }
+
+        private static Vector3 RotatePosition(Vector3 original)
+        {
+            return new Vector3(original.z, original.y, original.x);
+        }
+
+        private static Vector3 RotateScale(Vector3 original)
+        {
+            return new Vector3(original.z, original.y, original.x);
         }
 
         private static void CreateAffinityMarker(Transform parent, BuildTileAffinity affinity)

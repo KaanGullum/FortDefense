@@ -31,7 +31,9 @@ namespace FortDefense.Enemies
         private static void BuildVisual(EnemyDefinition definition, Transform root)
         {
             Color primary = definition.PrimaryColor;
-            Color dark = Color.Lerp(primary, Color.black, 0.4f);
+            Color secondary = definition.SecondaryColor;
+            Color accent = definition.AccentColor;
+            Color dark = Color.Lerp(secondary, Color.black, 0.28f);
 
             switch (definition.VisualStyle)
             {
@@ -46,8 +48,30 @@ namespace FortDefense.Enemies
                     break;
                 case EnemyVisualStyle.Armored:
                     PrimitiveFactory.CreatePrimitive("Body", PrimitiveType.Capsule, root, new Vector3(0f, 0.85f, 0f), new Vector3(1f, 1.2f, 1f), primary);
-                    PrimitiveFactory.CreatePrimitive("Shield", PrimitiveType.Cube, root, new Vector3(0f, 0.95f, 0.55f), new Vector3(1.1f, 1.15f, 0.18f), new Color(0.82f, 0.82f, 0.86f));
+                    PrimitiveFactory.CreatePrimitive("Shield", PrimitiveType.Cube, root, new Vector3(0f, 0.95f, 0.55f), new Vector3(1.1f, 1.15f, 0.18f), secondary);
                     PrimitiveFactory.CreatePrimitive("Helmet", PrimitiveType.Cylinder, root, new Vector3(0f, 1.72f, 0f), new Vector3(0.42f, 0.22f, 0.42f), dark);
+                    break;
+                case EnemyVisualStyle.ScoutBot:
+                    PrimitiveFactory.CreatePrimitive("Body", PrimitiveType.Cylinder, root, new Vector3(0f, 0.74f, 0f), new Vector3(0.6f, 0.52f, 0.6f), primary);
+                    PrimitiveFactory.CreatePrimitive("Head", PrimitiveType.Cube, root, new Vector3(0f, 1.32f, 0.08f), new Vector3(0.66f, 0.4f, 0.48f), secondary);
+                    PrimitiveFactory.CreatePrimitive("EyeBar", PrimitiveType.Cube, root, new Vector3(0f, 1.35f, 0.34f), new Vector3(0.42f, 0.11f, 0.08f), accent);
+                    PrimitiveFactory.CreatePrimitive("Backpack", PrimitiveType.Cube, root, new Vector3(0f, 0.82f, -0.32f), new Vector3(0.4f, 0.55f, 0.18f), dark);
+                    PrimitiveFactory.CreatePrimitive("LegA", PrimitiveType.Cylinder, root, new Vector3(-0.2f, 0.28f, 0f), new Vector3(0.08f, 0.32f, 0.08f), secondary);
+                    PrimitiveFactory.CreatePrimitive("LegB", PrimitiveType.Cylinder, root, new Vector3(0.2f, 0.28f, 0f), new Vector3(0.08f, 0.32f, 0.08f), secondary);
+                    break;
+                case EnemyVisualStyle.SiegeCrawler:
+                    PrimitiveFactory.CreatePrimitive("Chassis", PrimitiveType.Cube, root, new Vector3(0f, 0.68f, 0f), new Vector3(1.55f, 0.7f, 1.72f), primary);
+                    PrimitiveFactory.CreatePrimitive("Turret", PrimitiveType.Cylinder, root, new Vector3(0f, 1.18f, 0f), new Vector3(0.72f, 0.18f, 0.72f), secondary);
+                    PrimitiveFactory.CreatePrimitive("Ram", PrimitiveType.Cube, root, new Vector3(0f, 0.68f, 1.02f), new Vector3(0.5f, 0.26f, 0.52f), accent);
+                    PrimitiveFactory.CreatePrimitive("TrackLeft", PrimitiveType.Cube, root, new Vector3(-0.86f, 0.36f, 0f), new Vector3(0.24f, 0.28f, 1.68f), dark);
+                    PrimitiveFactory.CreatePrimitive("TrackRight", PrimitiveType.Cube, root, new Vector3(0.86f, 0.36f, 0f), new Vector3(0.24f, 0.28f, 1.68f), dark);
+                    break;
+                case EnemyVisualStyle.ShieldDrone:
+                    PrimitiveFactory.CreatePrimitive("Core", PrimitiveType.Sphere, root, new Vector3(0f, 1.08f, 0f), new Vector3(0.82f, 0.82f, 0.82f), primary);
+                    PrimitiveFactory.CreatePrimitive("LowerDisc", PrimitiveType.Cylinder, root, new Vector3(0f, 0.84f, 0f), new Vector3(0.96f, 0.08f, 0.96f), secondary);
+                    PrimitiveFactory.CreatePrimitive("UpperDisc", PrimitiveType.Cylinder, root, new Vector3(0f, 1.26f, 0f), new Vector3(0.72f, 0.06f, 0.72f), dark);
+                    PrimitiveFactory.CreatePrimitive("FrontLens", PrimitiveType.Sphere, root, new Vector3(0f, 1.08f, 0.42f), new Vector3(0.24f, 0.24f, 0.24f), accent);
+                    PrimitiveFactory.CreatePrimitive("Antenna", PrimitiveType.Cylinder, root, new Vector3(0f, 1.7f, 0f), new Vector3(0.08f, 0.24f, 0.08f), accent);
                     break;
             }
         }
@@ -64,4 +88,3 @@ namespace FortDefense.Enemies
         }
     }
 }
-

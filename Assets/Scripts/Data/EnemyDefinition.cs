@@ -23,6 +23,8 @@ namespace FortDefense.Data
 
         [Header("Visuals")]
         public Color PrimaryColor = Color.white;
+        public Color SecondaryColor = new Color(0.25f, 0.28f, 0.33f);
+        public Color AccentColor = new Color(0.94f, 0.87f, 0.31f);
 
         public float GetDamageMultiplier(DamageKind damageKind)
         {
@@ -40,4 +42,3 @@ namespace FortDefense.Data
         }
     }
 }
-

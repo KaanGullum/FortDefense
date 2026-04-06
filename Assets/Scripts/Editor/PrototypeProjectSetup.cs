@@ -12,7 +12,7 @@ namespace FortDefense.Editor
     [InitializeOnLoad]
     public static class PrototypeProjectSetup
     {
-        private const int CurrentPrototypeVersion = 2;
+        private const int CurrentPrototypeVersion = 3;
         private const string SessionKey = "FortDefense.PrototypeSetupCompleted";
         private const string ResourcesRoot = "Assets/Resources";
         private const string ConfigRoot = "Assets/Resources/GameConfigs";
@@ -249,7 +249,7 @@ namespace FortDefense.Editor
             {
                 asset.Id = "runner";
                 asset.DisplayName = "Runner";
-                asset.VisualStyle = EnemyVisualStyle.Runner;
+                asset.VisualStyle = EnemyVisualStyle.ScoutBot;
                 asset.MaxHealth = 28f;
                 asset.MoveSpeed = 5.2f;
                 asset.CoreDamage = 1;
@@ -257,14 +257,16 @@ namespace FortDefense.Editor
                 asset.LightDamageMultiplier = 1f;
                 asset.HeavyDamageMultiplier = 1f;
                 asset.ExplosiveDamageMultiplier = 1.1f;
-                asset.PrimaryColor = new Color(0.46f, 0.86f, 0.54f);
+                asset.PrimaryColor = new Color(0.24f, 0.82f, 0.74f);
+                asset.SecondaryColor = new Color(0.15f, 0.2f, 0.28f);
+                asset.AccentColor = new Color(0.96f, 0.84f, 0.28f);
             });
 
             EnemyDefinition brute = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/02_Brute.asset", forceRebuild, asset =>
             {
                 asset.Id = "brute";
                 asset.DisplayName = "Brute";
-                asset.VisualStyle = EnemyVisualStyle.Brute;
+                asset.VisualStyle = EnemyVisualStyle.SiegeCrawler;
                 asset.MaxHealth = 120f;
                 asset.MoveSpeed = 2.25f;
                 asset.CoreDamage = 3;
@@ -272,14 +274,16 @@ namespace FortDefense.Editor
                 asset.LightDamageMultiplier = 0.82f;
                 asset.HeavyDamageMultiplier = 1.25f;
                 asset.ExplosiveDamageMultiplier = 1f;
-                asset.PrimaryColor = new Color(0.74f, 0.41f, 0.28f);
+                asset.PrimaryColor = new Color(0.74f, 0.37f, 0.22f);
+                asset.SecondaryColor = new Color(0.27f, 0.24f, 0.22f);
+                asset.AccentColor = new Color(0.98f, 0.66f, 0.22f);
             });
 
             EnemyDefinition armored = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/03_Armored.asset", forceRebuild, asset =>
             {
                 asset.Id = "armored";
                 asset.DisplayName = "Armored";
-                asset.VisualStyle = EnemyVisualStyle.Armored;
+                asset.VisualStyle = EnemyVisualStyle.ShieldDrone;
                 asset.MaxHealth = 92f;
                 asset.MoveSpeed = 3.2f;
                 asset.CoreDamage = 2;
@@ -287,7 +291,9 @@ namespace FortDefense.Editor
                 asset.LightDamageMultiplier = 0.55f;
                 asset.HeavyDamageMultiplier = 1.1f;
                 asset.ExplosiveDamageMultiplier = 0.85f;
-                asset.PrimaryColor = new Color(0.47f, 0.58f, 0.73f);
+                asset.PrimaryColor = new Color(0.49f, 0.67f, 0.89f);
+                asset.SecondaryColor = new Color(0.26f, 0.31f, 0.38f);
+                asset.AccentColor = new Color(0.88f, 0.95f, 1f);
             });
 
             CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/01_Wave01.asset", forceRebuild, asset =>
@@ -372,11 +378,11 @@ namespace FortDefense.Editor
         {
             PlayerSettings.companyName = "Codex";
             PlayerSettings.productName = "Fort Defense";
-            PlayerSettings.defaultInterfaceOrientation = UIOrientation.LandscapeLeft;
-            PlayerSettings.allowedAutorotateToPortrait = false;
+            PlayerSettings.defaultInterfaceOrientation = UIOrientation.Portrait;
+            PlayerSettings.allowedAutorotateToPortrait = true;
             PlayerSettings.allowedAutorotateToPortraitUpsideDown = false;
-            PlayerSettings.allowedAutorotateToLandscapeLeft = true;
-            PlayerSettings.allowedAutorotateToLandscapeRight = true;
+            PlayerSettings.allowedAutorotateToLandscapeLeft = false;
+            PlayerSettings.allowedAutorotateToLandscapeRight = false;
             PlayerSettings.SetApplicationIdentifier(BuildTargetGroup.iOS, "com.codex.fortdefense");
         }
 

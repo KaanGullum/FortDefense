@@ -1,6 +1,6 @@
 # Fort Defense Prototype
 
-Stylized 3D Unity tower defense / base defense prototype built around a fixed road with square build slots next to the lane. The project targets iPhone landscape first and keeps the first vertical slice focused on readable placement, waves, combat, and a light production loop.
+Stylized 3D Unity tower defense / base defense prototype built around a fixed road with square build slots next to the lane. The project now targets iPhone portrait first and keeps the first vertical slice focused on readable placement, waves, combat, and a light production loop.
 
 ## What Is Included
 
@@ -49,6 +49,7 @@ Stylized 3D Unity tower defense / base defense prototype built around a fixed ro
 
 - building stats and costs live in `Assets/Resources/GameConfigs/Buildings`
 - enemy stats live in `Assets/Resources/GameConfigs/Enemies`
+- enemy visuals can be changed per asset from the inspector via `Visual Style`, `Primary Color`, `Secondary Color`, and `Accent Color`
 - wave composition lives in `Assets/Resources/GameConfigs/Waves`
 - starting resources and core health live in `Assets/Resources/GameConfigs/GameBalanceConfig.asset`
 - prototype asset versioning is tracked in `GameBalanceConfig`, so opening the project after script changes can regenerate defaults automatically
@@ -77,7 +78,7 @@ The runtime loads these assets from `Resources`, so you can rebalance the protot
 - projectile combat including AoE mortar shots
 - fixed-path enemy movement
 - wave countdowns, progression, and victory/defeat overlays
-- iPhone landscape-oriented HUD and build menu
+- iPhone portrait-oriented camera and HUD
 
 ## Placeholder / Next Steps
 

@@ -151,11 +151,11 @@ namespace FortDefense.Core
 
             Camera camera = cameraObject.AddComponent<Camera>();
             camera.orthographic = true;
-            camera.orthographicSize = 18.5f;
+            camera.orthographicSize = 34.5f;
             camera.clearFlags = CameraClearFlags.SolidColor;
             camera.backgroundColor = new Color(0.62f, 0.78f, 0.94f);
-            camera.transform.position = mapCenter + new Vector3(-11f, 30f, -16f);
-            camera.transform.rotation = Quaternion.Euler(54f, 34f, 0f);
+            camera.transform.position = mapCenter + new Vector3(0f, 42f, -18f);
+            camera.transform.rotation = Quaternion.Euler(63f, 0f, 0f);
 
             return camera;
         }

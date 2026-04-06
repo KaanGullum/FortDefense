@@ -15,8 +15,8 @@ namespace FortDefense.UI
 
             CanvasScaler scaler = canvasObject.GetComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
-            scaler.referenceResolution = new Vector2(2532f, 1170f);
-            scaler.matchWidthOrHeight = 0.5f;
+            scaler.referenceResolution = new Vector2(1170f, 2532f);
+            scaler.matchWidthOrHeight = 1f;
 
             return canvas;
         }
