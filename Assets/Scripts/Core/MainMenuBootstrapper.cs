@@ -54,6 +54,10 @@ namespace FortDefense.Core
 
             GameObject preview = new GameObject(definition.DisplayName + "_Preview");
             preview.transform.position = map.BuildTiles[tileIndex].transform.position + Vector3.up * 0.15f;
+            preview.transform.localScale = new Vector3(
+                definition.VisualFootprintScale,
+                definition.VisualHeightScale,
+                definition.VisualFootprintScale);
             BuildingVisualFactory.BuildVisual(definition, preview.transform);
         }
 

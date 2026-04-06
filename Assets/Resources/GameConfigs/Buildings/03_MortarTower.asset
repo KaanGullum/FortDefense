@@ -35,6 +35,9 @@ MonoBehaviour:
     Amount: 10
   UpgradeCostMultiplierPerLevel: 1.38
   SellRefundPercent: 0.65
+  VisualFootprintScale: 0.74
+  VisualHeightScale: 0.66
+  VisualYOffset: 0
   DamageKind: 2
   Damage: 20
   AttackInterval: 2.2

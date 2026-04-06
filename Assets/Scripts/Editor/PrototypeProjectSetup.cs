@@ -85,6 +85,9 @@ namespace FortDefense.Editor
                 asset.UpgradeCost = Cost(new ResourceAmount(ResourceType.Ore, 40), new ResourceAmount(ResourceType.Energy, 10));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.72f;
+                asset.VisualHeightScale = 0.78f;
+                asset.VisualYOffset = 0f;
                 asset.DamageKind = DamageKind.Light;
                 asset.Damage = 8.5f;
                 asset.AttackInterval = 0.45f;
@@ -118,6 +121,9 @@ namespace FortDefense.Editor
                     new ResourceAmount(ResourceType.Alloy, 8));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.7f;
+                asset.VisualHeightScale = 0.74f;
+                asset.VisualYOffset = 0f;
                 asset.DamageKind = DamageKind.Heavy;
                 asset.Damage = 30f;
                 asset.AttackInterval = 1.3f;
@@ -154,6 +160,9 @@ namespace FortDefense.Editor
                     new ResourceAmount(ResourceType.Alloy, 10));
                 asset.UpgradeCostMultiplierPerLevel = 1.38f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.74f;
+                asset.VisualHeightScale = 0.66f;
+                asset.VisualYOffset = 0f;
                 asset.DamageKind = DamageKind.Explosive;
                 asset.Damage = 20f;
                 asset.AttackInterval = 2.2f;
@@ -183,6 +192,9 @@ namespace FortDefense.Editor
                 asset.UpgradeCost = Cost(new ResourceAmount(ResourceType.Ore, 30), new ResourceAmount(ResourceType.Energy, 8));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.6f;
+                asset.VisualHeightScale = 0.6f;
+                asset.VisualYOffset = -0.02f;
                 asset.ProductionInterval = 2.8f;
                 asset.ConsumptionPerCycle = new List<ResourceAmount>();
                 asset.ProductionPerCycle = Cost(new ResourceAmount(ResourceType.Ore, 12));
@@ -200,6 +212,9 @@ namespace FortDefense.Editor
                 asset.UpgradeCost = Cost(new ResourceAmount(ResourceType.Ore, 32), new ResourceAmount(ResourceType.Energy, 6));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.52f;
+                asset.VisualHeightScale = 0.58f;
+                asset.VisualYOffset = -0.02f;
                 asset.ProductionInterval = 2.7f;
                 asset.ConsumptionPerCycle = new List<ResourceAmount>();
                 asset.ProductionPerCycle = Cost(new ResourceAmount(ResourceType.Energy, 8));
@@ -217,6 +232,9 @@ namespace FortDefense.Editor
                 asset.UpgradeCost = Cost(new ResourceAmount(ResourceType.Ore, 36), new ResourceAmount(ResourceType.Energy, 10));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.58f;
+                asset.VisualHeightScale = 0.62f;
+                asset.VisualYOffset = -0.01f;
                 asset.ProductionInterval = 4.2f;
                 asset.ConsumptionPerCycle = Cost(new ResourceAmount(ResourceType.Ore, 16));
                 asset.ProductionPerCycle = Cost(new ResourceAmount(ResourceType.Alloy, 7));
@@ -237,6 +255,9 @@ namespace FortDefense.Editor
                 asset.UpgradeCost = Cost(new ResourceAmount(ResourceType.Ore, 34), new ResourceAmount(ResourceType.Energy, 10), new ResourceAmount(ResourceType.Alloy, 5));
                 asset.UpgradeCostMultiplierPerLevel = 1.35f;
                 asset.SellRefundPercent = 0.65f;
+                asset.VisualFootprintScale = 0.57f;
+                asset.VisualHeightScale = 0.6f;
+                asset.VisualYOffset = -0.01f;
                 asset.ProductionInterval = 4f;
                 asset.ConsumptionPerCycle = Cost(
                     new ResourceAmount(ResourceType.Alloy, 4),

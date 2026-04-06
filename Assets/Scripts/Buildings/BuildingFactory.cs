@@ -14,7 +14,7 @@ namespace FortDefense.Buildings
         {
             GameObject root = new GameObject(definition.DisplayName);
             root.transform.SetParent(tile.transform, false);
-            root.transform.localPosition = new Vector3(0f, 0.15f, 0f);
+            root.transform.localPosition = new Vector3(0f, 0.15f + definition.VisualYOffset, 0f);
 
             BuildingVisualResult visuals = BuildingVisualFactory.BuildVisual(definition, root.transform);
 

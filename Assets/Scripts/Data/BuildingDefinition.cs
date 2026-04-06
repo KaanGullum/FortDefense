@@ -21,6 +21,11 @@ namespace FortDefense.Data
         public float UpgradeCostMultiplierPerLevel = 1.3f;
         [Range(0.1f, 1f)] public float SellRefundPercent = 0.6f;
 
+        [Header("Presentation")]
+        [Range(0.35f, 1.5f)] public float VisualFootprintScale = 0.72f;
+        [Range(0.35f, 1.5f)] public float VisualHeightScale = 0.78f;
+        [Range(-0.2f, 0.6f)] public float VisualYOffset = 0f;
+
         [Header("Combat")]
         public DamageKind DamageKind = DamageKind.Light;
         public float Damage = 5f;

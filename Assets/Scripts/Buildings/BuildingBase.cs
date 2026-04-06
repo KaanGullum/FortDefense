@@ -105,8 +105,11 @@ namespace FortDefense.Buildings
 
         private void RefreshLevelVisual()
         {
-            float scale = 1f + ((Level - 1) * 0.08f);
-            transform.localScale = new Vector3(scale, scale, scale);
+            float levelScale = 1f + ((Level - 1) * 0.05f);
+            transform.localScale = new Vector3(
+                Definition.VisualFootprintScale * levelScale,
+                Definition.VisualHeightScale * levelScale,
+                Definition.VisualFootprintScale * levelScale);
         }
     }
 }
