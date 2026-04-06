@@ -347,7 +347,6 @@ namespace FortDefense.Editor
             ConfigureBuildSettings();
             ConfigurePlayerSettings();
 
-            EditorUtility.SetDirty(balanceConfig);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
         }
