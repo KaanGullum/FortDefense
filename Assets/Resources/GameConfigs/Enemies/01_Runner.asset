@@ -25,3 +25,13 @@ MonoBehaviour:
   PrimaryColor: {r: 0.24, g: 0.82, b: 0.74, a: 1}
   SecondaryColor: {r: 0.15, g: 0.2, b: 0.28, a: 1}
   AccentColor: {r: 0.96, g: 0.84, b: 0.28, a: 1}
+  HoverAmplitude: 0.16
+  HoverFrequency: 4.6
+  BobAmplitude: 0.045
+  BobFrequency: 10.5
+  LeanAmount: 7.5
+  SurfaceGlossiness: 0.34
+  AccentEmission: 1.25
+  DebrisBurstForce: 4.8
+  DebrisSpinSpeed: 340
+  DebrisLifetime: 0.52

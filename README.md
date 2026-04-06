@@ -50,6 +50,7 @@ Stylized 3D Unity tower defense / base defense prototype built around a fixed ro
 - building stats and costs live in `Assets/Resources/GameConfigs/Buildings`
 - enemy stats live in `Assets/Resources/GameConfigs/Enemies`
 - enemy visuals can be changed per asset from the inspector via `Visual Style`, `Primary Color`, `Secondary Color`, and `Accent Color`
+- enemy motion, surface gloss, emission, and death-burst tuning can also be adjusted per enemy asset in the inspector
 - wave composition lives in `Assets/Resources/GameConfigs/Waves`
 - starting resources and core health live in `Assets/Resources/GameConfigs/GameBalanceConfig.asset`
 - prototype asset versioning is tracked in `GameBalanceConfig`, so opening the project after script changes can regenerate defaults automatically
@@ -77,6 +78,7 @@ The runtime loads these assets from `Resources`, so you can rebalance the protot
 - resource-node style tile bonuses for map readability and strategic placement
 - projectile combat including AoE mortar shots
 - fixed-path enemy movement
+- mechanical enemy presentation with hover/bob motion, type-specific part animation, and breakup death bursts
 - wave countdowns, progression, and victory/defeat overlays
 - iPhone portrait-oriented camera and HUD
 

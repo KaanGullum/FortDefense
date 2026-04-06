@@ -12,7 +12,7 @@ namespace FortDefense.Editor
     [InitializeOnLoad]
     public static class PrototypeProjectSetup
     {
-        private const int CurrentPrototypeVersion = 3;
+        private const int CurrentPrototypeVersion = 4;
         private const string SessionKey = "FortDefense.PrototypeSetupCompleted";
         private const string ResourcesRoot = "Assets/Resources";
         private const string ConfigRoot = "Assets/Resources/GameConfigs";
@@ -260,6 +260,16 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.24f, 0.82f, 0.74f);
                 asset.SecondaryColor = new Color(0.15f, 0.2f, 0.28f);
                 asset.AccentColor = new Color(0.96f, 0.84f, 0.28f);
+                asset.HoverAmplitude = 0.16f;
+                asset.HoverFrequency = 4.6f;
+                asset.BobAmplitude = 0.045f;
+                asset.BobFrequency = 10.5f;
+                asset.LeanAmount = 7.5f;
+                asset.SurfaceGlossiness = 0.34f;
+                asset.AccentEmission = 1.25f;
+                asset.DebrisBurstForce = 4.8f;
+                asset.DebrisSpinSpeed = 340f;
+                asset.DebrisLifetime = 0.52f;
             });
 
             EnemyDefinition brute = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/02_Brute.asset", forceRebuild, asset =>
@@ -277,6 +287,16 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.74f, 0.37f, 0.22f);
                 asset.SecondaryColor = new Color(0.27f, 0.24f, 0.22f);
                 asset.AccentColor = new Color(0.98f, 0.66f, 0.22f);
+                asset.HoverAmplitude = 0.02f;
+                asset.HoverFrequency = 2.2f;
+                asset.BobAmplitude = 0.035f;
+                asset.BobFrequency = 4.2f;
+                asset.LeanAmount = 2.8f;
+                asset.SurfaceGlossiness = 0.22f;
+                asset.AccentEmission = 0.48f;
+                asset.DebrisBurstForce = 3.7f;
+                asset.DebrisSpinSpeed = 180f;
+                asset.DebrisLifetime = 0.68f;
             });
 
             EnemyDefinition armored = CreateOrUpdateAsset<EnemyDefinition>(EnemiesRoot + "/03_Armored.asset", forceRebuild, asset =>
@@ -294,6 +314,16 @@ namespace FortDefense.Editor
                 asset.PrimaryColor = new Color(0.49f, 0.67f, 0.89f);
                 asset.SecondaryColor = new Color(0.26f, 0.31f, 0.38f);
                 asset.AccentColor = new Color(0.88f, 0.95f, 1f);
+                asset.HoverAmplitude = 0.24f;
+                asset.HoverFrequency = 2.8f;
+                asset.BobAmplitude = 0.05f;
+                asset.BobFrequency = 6.6f;
+                asset.LeanAmount = 4.8f;
+                asset.SurfaceGlossiness = 0.5f;
+                asset.AccentEmission = 1.45f;
+                asset.DebrisBurstForce = 4.25f;
+                asset.DebrisSpinSpeed = 360f;
+                asset.DebrisLifetime = 0.56f;
             });
 
             CreateOrUpdateAsset<WaveDefinition>(WavesRoot + "/01_Wave01.asset", forceRebuild, asset =>

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92a8eb983ef0c441796df5c0c3f2cc41, type: 3}
   m_Name: GameBalanceConfig
   m_EditorClassIdentifier: 
-  PrototypeVersion: 3
+  PrototypeVersion: 4
   StartingCoreHealth: 28
   StartingResources:
   - Type: 0

@@ -11,9 +11,23 @@ namespace FortDefense.Utilities
             Vector3 localPosition,
             Vector3 localScale,
             Color color,
+            float glossiness,
+            float emissionIntensity,
             bool enableCollider = false)
         {
-            return CreatePrimitive(name, primitiveType, parent, localPosition, Quaternion.identity, localScale, color, enableCollider);
+            return CreatePrimitive(name, primitiveType, parent, localPosition, Quaternion.identity, localScale, color, glossiness, emissionIntensity, enableCollider);
+        }
+
+        public static GameObject CreatePrimitive(
+            string name,
+            PrimitiveType primitiveType,
+            Transform parent,
+            Vector3 localPosition,
+            Vector3 localScale,
+            Color color,
+            bool enableCollider = false)
+        {
+            return CreatePrimitive(name, primitiveType, parent, localPosition, Quaternion.identity, localScale, color, 0.08f, 0f, enableCollider);
         }
 
         public static GameObject CreatePrimitive(
@@ -24,6 +38,8 @@ namespace FortDefense.Utilities
             Quaternion localRotation,
             Vector3 localScale,
             Color color,
+            float glossiness,
+            float emissionIntensity,
             bool enableCollider = false)
         {
             GameObject instance = GameObject.CreatePrimitive(primitiveType);
@@ -36,8 +52,27 @@ namespace FortDefense.Utilities
             Renderer renderer = instance.GetComponent<Renderer>();
             if (renderer != null)
             {
-                renderer.material.color = color;
-                renderer.material.SetFloat("_Glossiness", 0.08f);
+                Material material = renderer.material;
+                material.color = color;
+
+                if (material.HasProperty("_Glossiness"))
+                {
+                    material.SetFloat("_Glossiness", glossiness);
+                }
+
+                if (material.HasProperty("_EmissionColor"))
+                {
+                    Color emissionColor = color * emissionIntensity;
+                    material.SetColor("_EmissionColor", emissionColor);
+                    if (emissionIntensity > 0.001f)
+                    {
+                        material.EnableKeyword("_EMISSION");
+                    }
+                    else
+                    {
+                        material.DisableKeyword("_EMISSION");
+                    }
+                }
             }
 
             Collider collider = instance.GetComponent<Collider>();
@@ -48,6 +83,18 @@ namespace FortDefense.Utilities
 
             return instance;
         }
+
+        public static GameObject CreatePrimitive(
+            string name,
+            PrimitiveType primitiveType,
+            Transform parent,
+            Vector3 localPosition,
+            Quaternion localRotation,
+            Vector3 localScale,
+            Color color,
+            bool enableCollider = false)
+        {
+            return CreatePrimitive(name, primitiveType, parent, localPosition, localRotation, localScale, color, 0.08f, 0f, enableCollider);
+        }
     }
 }
-
